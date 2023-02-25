@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import MyAppBar from "./AppBar/MyAppBar";
-import MyDrawer from "./Drawer/MyResponsiveDrawer";
-import ContentContainer from "./ContentContainer";
+import MyAppBar from "./layout/AppBar/MyAppBar";
+import MyDrawer from "./layout/Drawer/MyResponsiveDrawer";
+import ContentContainer from "./layout/ContentContainer";
 
 function App() {
 

@@ -1,5 +1,5 @@
 import {AppBar, Avatar, IconButton, Toolbar, Typography} from "@mui/material";
-import {githubUserInfo} from "../../sample/githubInfo";
+import {githubUserInfo} from "../../../sample/githubInfo";
 import MenuIcon from "@mui/icons-material/Menu";
 import * as React from "react";
 
