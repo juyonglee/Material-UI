@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import MyAppBar from "./AppBar/MyAppBar";
 import MyDrawer from "./Drawer/MyResponsiveDrawer";
-import ContentContainer from "../components/ContentContainer";
+import ContentContainer from "./ContentContainer";
 
 function App() {
 
