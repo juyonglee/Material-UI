@@ -9,15 +9,18 @@ import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import * as React from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import {Link} from "@mui/material";
+import {Link as RouterLink} from "react-router-dom";
 
 function MyDrawerIList() {
   return (
       <div>
         <Toolbar/>
         <List>
+          <Link component={RouterLink} to={"/repository"} underline={"none"} sx={{color: "black"}}>
               <ListItem key="사용">
                 <ListItemButton>
-                  <ListItemIcon>
+                  <ListItemIcon sx={{minWidth: 40}}>
                     <GitHubIcon/>
                   </ListItemIcon>
                   <ListItemText primary={"Github Repository"} primaryTypographyProps={{
@@ -26,6 +29,7 @@ function MyDrawerIList() {
                   }}/>
                 </ListItemButton>
               </ListItem>
+          </Link>
         </List>
         <Divider/>
         <List>
