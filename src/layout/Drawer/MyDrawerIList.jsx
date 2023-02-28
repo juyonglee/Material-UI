@@ -30,6 +30,19 @@ function MyDrawerIList() {
                 </ListItemButton>
               </ListItem>
           </Link>
+          <Link component={RouterLink} to={"/schedule"} underline={"none"} sx={{color: "black"}}>
+            <ListItem key="schedule_menu">
+              <ListItemButton>
+                <ListItemIcon sx={{minWidth: 40}}>
+                  <GitHubIcon/>
+                </ListItemIcon>
+                <ListItemText primary={"My Schedule"} primaryTypographyProps={{
+                  variant: 'body2',
+                  fontWeight: '300',
+                }}/>
+              </ListItemButton>
+            </ListItem>
+            </Link>
         </List>
         <Divider/>
         <List>
