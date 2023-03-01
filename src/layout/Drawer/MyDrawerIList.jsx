@@ -11,6 +11,7 @@ import * as React from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {Link} from "@mui/material";
 import {Link as RouterLink} from "react-router-dom";
+import TodayIcon from '@mui/icons-material/Today';
 
 function MyDrawerIList() {
   return (
@@ -34,9 +35,9 @@ function MyDrawerIList() {
             <ListItem key="schedule_menu">
               <ListItemButton>
                 <ListItemIcon sx={{minWidth: 40}}>
-                  <GitHubIcon/>
+                  <TodayIcon/>
                 </ListItemIcon>
-                <ListItemText primary={"My Schedule"} primaryTypographyProps={{
+                <ListItemText primary={"Schedule"} primaryTypographyProps={{
                   variant: 'body2',
                   fontWeight: '300',
                 }}/>
