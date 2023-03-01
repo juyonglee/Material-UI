@@ -7,12 +7,19 @@ import '@fontsource/roboto/700.css';
 import reportWebVitals from './reportWebVitals';
 import App from "./layout/App";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Schedule from "./components/Schedule";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
-  },
+    element: <App/>,
+    children: [
+      {
+        path: "/schedule",
+        element: <Schedule/>
+      }
+    ]
+  }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
