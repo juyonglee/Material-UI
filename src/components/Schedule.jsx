@@ -33,7 +33,7 @@ export default function Schedule() {
                 <CardContent sx={{minHeight: 500}}>
                   {
                     (state.todoList.length === 0) &&
-                        <Box sx={{minHeight: 500}} display="flex" justifyContent={"center"} alignItems={"center"}>
+                        <Box sx={{minHeight: 500}} display="flex" flexGrow={1} justifyContent={"center"} alignItems={"center"}>
                           <Typography variant={"body1"} fontWeight="400">오늘 할일을 추가해주세요.</Typography>
                         </Box>
                   }
