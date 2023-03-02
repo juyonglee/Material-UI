@@ -9,11 +9,12 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import {useState} from "react";
+import {todoList} from "../sample/todoList";
 
 export default function Schedule() {
 
   const [state, setState] = useState({
-    todoList: []
+    todoList: todoList
   })
 
   const date = new Date();
