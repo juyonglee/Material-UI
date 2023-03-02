@@ -7,7 +7,7 @@ function MyAppBar({handleDrawerToggle}) {
   return (
       <AppBar
           position="fixed"
-          sm
+          sm="true"
           sx={{
             zIndex: 1500,
             marginLeft: {sm: "240px"},
