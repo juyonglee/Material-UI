@@ -5,11 +5,12 @@ import {
   CardHeader,
   Container, Divider,
   List,
-  ListItem, Typography
+  ListItem, ListItemButton, ListItemIcon, ListItemText, Typography
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import {useState} from "react";
 import {todoList} from "../sample/todoList";
+import {CheckBox} from "@mui/icons-material";
 
 export default function Schedule() {
 
@@ -39,10 +40,16 @@ export default function Schedule() {
                         </Box>
                   }
                   {
-                    state.todoList.map((todo, index) => {
+                    state.todoList.map((todoItem, index) => {
                       return (
                           <List>
-                            <ListItem>
+                            <ListItem key={todoItem.id}>
+                              <ListItemButton>
+                                <ListItemIcon>
+                                <CheckBox tabIndex={-1}/>
+                                </ListItemIcon>
+                                <ListItemText primary={todoItem.todo} secondary={todoItem.id === 3 && Date.now()}/>
+                              </ListItemButton>
                             </ListItem>
                           </List>
                       )
