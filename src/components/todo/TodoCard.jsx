@@ -6,7 +6,7 @@ import {
   List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, TextField,
   Typography
 } from "@mui/material";
-import TodoMenus from "../TodoMenus";
+import TodoMenus from "./TodoMenus";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import {useState} from "react";
 import {todoList} from "../../sample/todoList";
