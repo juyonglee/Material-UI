@@ -42,7 +42,12 @@ export default function TodoCard() {
 
   const todoKeyDownHandler = (e) => {
     if (e.key === 'Enter') {
-      console.log("Click!")
+      setState(prevState => {
+        return {
+          ...prevState,
+          todoInputValue: ''
+        }
+      })
     }
   }
 
