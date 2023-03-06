@@ -16,8 +16,18 @@ export default function TodoCard() {
   const date = new Date()
 
   const [state, setState] = useState({
-    todoList: todoList
+    todoList: todoList,
+    todoInputValue: ""
   })
+
+  const todoInputHandler = (e) => {
+    setState(prevState => {
+      return {
+        ...prevState,
+        todoInputValue: e.target.value
+      }
+    })
+  }
 
   const handleToggle = (index) => () => {
     const completeState = !state.todoList[index].complete
@@ -88,7 +98,7 @@ export default function TodoCard() {
         </CardContent>
         <CardActions>
           <Stack alignItems={"center"} flexDirection={"row"} flexGrow={1} sx={{borderRadius: 10, backgroundColor: '#ECEFF1'}} paddingLeft={3} marginBottom={1}>
-            <TextField placeholder={"할일을 입력해주세요."} variant="standard" size={"small"} sx={{flexGrow: 1, paddingTop: 0.5}} InputProps={{ disableUnderline: true }}/>
+            <TextField value={state.todoInputValue} onChange={todoInputHandler} placeholder={"할일을 입력해주세요."} variant="standard" size={"small"} sx={{flexGrow: 1, paddingTop: 0.5}} InputProps={{ disableUnderline: true }}/>
             <IconButton aria-label="delete">
               <RemoveCircleOutlineIcon />
             </IconButton>
