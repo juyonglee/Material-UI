@@ -1,15 +1,26 @@
 import {
-  Box, Card, CardActions,
+  Box,
+  Card,
+  CardActions,
   CardContent,
-  CardHeader, Checkbox,
-  Divider, IconButton,
-  List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, TextField,
+  CardHeader,
+  Checkbox,
+  Divider,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Stack,
+  TextField,
   Typography
 } from "@mui/material";
 import TodoMenus from "./TodoMenus";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import {useState} from "react";
 import {todoList} from "../../sample/todoList";
+import {addTodo} from "../../redux/actions/todoAction";
 
 export default function TodoCard() {
 
@@ -27,6 +38,12 @@ export default function TodoCard() {
         todoInputValue: e.target.value
       }
     })
+  }
+
+  const todoKeyDownHandler = (e) => {
+    if (e.key === 'Enter') {
+      console.log("Click!")
+    }
   }
 
   const handleToggle = (index) => () => {
@@ -98,7 +115,7 @@ export default function TodoCard() {
         </CardContent>
         <CardActions>
           <Stack alignItems={"center"} flexDirection={"row"} flexGrow={1} sx={{borderRadius: 10, backgroundColor: '#ECEFF1'}} paddingLeft={3} marginBottom={1}>
-            <TextField value={state.todoInputValue} onChange={todoInputHandler} placeholder={"할일을 입력해주세요."} variant="standard" size={"small"} sx={{flexGrow: 1, paddingTop: 0.5}} InputProps={{ disableUnderline: true }}/>
+            <TextField value={state.todoInputValue} onKeyPress={todoKeyDownHandler} onChange={todoInputHandler} placeholder={"할일을 입력해주세요."} variant="standard" size={"small"} sx={{flexGrow: 1, paddingTop: 0.5}} InputProps={{ disableUnderline: true }}/>
             <IconButton aria-label="delete">
               <RemoveCircleOutlineIcon />
             </IconButton>
